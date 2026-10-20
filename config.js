@@ -28,7 +28,7 @@ window.VILLA = {
   facts: {
     guests: 11,
     bedrooms: 5,
-    bathrooms: 6,
+    bathrooms: 5,
     pool: "32 m²",
   },
 
@@ -45,11 +45,23 @@ window.VILLA = {
      PLACEHOLDER PRICES: replace with your own.                                  */
   currency: "€",
   seasons: [
-    { name: "Pre-season", from: "05-01", to: "06-11", price: 1800 },
-    { name: "High season", from: "06-12", to: "07-09", price: 2400 },
-    { name: "Peak season", from: "07-10", to: "08-20", price: 2900 },
-    { name: "High season", from: "08-21", to: "09-03", price: 2400 },
-    { name: "Post-season", from: "09-04", to: "10-02", price: 1800 },
+    {
+      name: "Pre-season / Post-season",
+      from: "05-01",
+      to: "06-11",
+      price: 1600,
+    },
+    { name: "Mid-season", from: "05-29", to: "06-25", price: 2000 },
+    { name: "High season", from: "06-26", to: "07-02", price: 2800 },
+    { name: "Peak season", from: "07-03", to: "08-20", price: 3200 },
+    { name: "High season", from: "08-21", to: "08-27", price: 2800 },
+    { name: "Mid-season", from: "08-28", to: "09-10", price: 2000 },
+    {
+      name: "Pre-season / Post-season",
+      from: "09-11",
+      to: "10-02",
+      price: 1600,
+    },
   ],
   securityDeposit: 300,
 
