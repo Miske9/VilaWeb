@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Villa Misan · Holiday villa with private pool in Istria, Croatia</title>
+  <meta name="description" content="Villa Misan is a stone holiday villa with a private pool in Bokordići, central Istria. Check availability, prices and book directly with the owner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">Villa <span>Misan</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#prices">Prices</a>
+      <a href="#availability">Availability</a>
+      <a href="#location">Location</a>
+      <a href="#faq">FAQ</a>
+      <a href="#availability" class="btn btn--small">Book now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__bg photo" style="--img:url('images/hero.jpg')"></div>
+  <div class="hero__shade"></div>
+  <div class="hero__content">
+    <p class="eyebrow">Bokordići · Istria · Croatia</p>
+    <h1>Villa Misan</h1>
+    <p class="hero__lead">A stone villa with a private pool in central Istria.</p>
+    <div class="hero__cta">
+      <a href="#availability" class="btn">Check availability</a>
+      <a href="#gallery" class="btn btn--ghost">See the villa</a>
+    </div>
+    <ul class="hero__facts" id="heroFacts"></ul>
+  </div>
+</section>
+
+<!-- WHY BOOK DIRECT -->
+<section class="direct">
+  <div class="wrap direct__grid">
+    <div><strong>Best price guaranteed</strong><span>No agency or platform fees</span></div>
+    <div><strong>Talk to the owner</strong><span>Quick personal answers</span></div>
+    <div><strong>Weekly stays</strong><span>Saturday to Saturday</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about__text">
+      <p class="eyebrow">About the villa</p>
+      <h2>Traditional Istrian stone, modern comfort</h2>
+      <p>Villa Misan is a lovingly restored stone house in the quiet village of Bokordići, in the green heart of Istria. Thick stone walls keep it cool in summer, while a fireplace and underfloor heating make it cosy off-season.</p>
+      <p>Outside, a private non heated pool, sun loungers and a covered terrace with a stone barbecue look over a large fenced garden. It's an ideal base for families and friends, with sandy coves, Roman Pula, Venetian Rovinj and hilltop Motovun all within easy reach.</p>
+      <p class="about__sign">— Your hosts, the Mišan family</p>
+    </div>
+    <div class="about__photos">
+      <div class="photo photo--tall" style="--img:url('images/about-1.jpg')"></div>
+      <div class="photo" style="--img:url('images/about-2.jpg')"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h3 class="amen__title">What's included</h3>
+    <ul class="amenities">
+      <li>🏊 Private pool</li>
+      <li>🌳 Fenced garden</li>
+      <li>🔥 Stone barbecue</li>
+      <li>❄️ Air conditioning throughout</li>
+      <li>📶 Fast Wi-Fi</li>
+      <li>🅿️ Free private parking</li>
+      <li>🍳 Fully equipped kitchen</li>
+      <li>🧺 Washing machine</li>
+      <li>🛏️ Bed linen &amp; towels</li>
+      <li>👶 Baby cot &amp; high chair</li>
+      <li>📺 Smart TV</li>
+      <li>🧖 Sauna</li>
+      <li>🏓 Table tennis</li>
+      <li>⚽ Teqball</li>
+      <li>🛝 Children's playground</li>
+      <li>🍽️ Covered outdoor dining</li>
+    </ul>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section--alt" id="gallery">
+  <div class="wrap">
+    <div class="gallery__head">
+      <div>
+        <p class="eyebrow">Gallery</p>
+        <h2>Take a look around</h2>
+      </div>
+      <button class="btn btn--outline" id="galleryAll" type="button">View all photos</button>
+    </div>
+    <div class="gallery" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section class="section" id="prices">
+  <div class="wrap">
+    <p class="eyebrow">Prices</p>
+    <h2>Seasonal rates</h2>
+    <p class="muted">Price per week for the whole villa, up to <span data-fact="guests"></span> guests. Stays are Saturday to Saturday.</p>
+    <div class="prices" id="priceCards"></div>
+    <ul class="price-notes" id="priceNotes"></ul>
+  </div>
+</section>
+
+<!-- AVAILABILITY + BOOKING -->
+<section class="section section--alt" id="availability">
+  <div class="wrap">
+    <p class="eyebrow">Availability</p>
+    <h2>Choose your dates</h2>
+    <p class="muted">Bookings are open from <b data-fact="openFrom"></b> to <b data-fact="openTo"></b>. Stays are weekly, Saturday to Saturday: click your arrival Saturday to book one week, or click a later Saturday to stay longer. Check-in from <span data-fact="checkIn"></span>, check-out by <span data-fact="checkOut"></span>.</p>
+
+    <div class="booking">
+      <div class="cal">
+        <div class="cal__head">
+          <button class="cal__nav" id="calPrev" aria-label="Previous month">‹</button>
+          <button class="cal__nav" id="calNext" aria-label="Next month">›</button>
+        </div>
+        <div class="cal__months" id="calMonths"></div>
+        <div class="cal__legend">
+          <span><i class="lg lg--free"></i>Available Saturday (arrival / departure)</span>
+          <span><i class="lg lg--booked"></i>Booked</span>
+          <span><i class="lg lg--sel"></i>Your stay</span>
+          <span><i class="lg lg--closed"></i>Not bookable</span>
+        </div>
+      </div>
+
+      <form class="request" id="requestForm" novalidate>
+        <h3>Booking request</h3>
+        <div class="summary" id="summary"><p class="muted">Click an arrival Saturday in the calendar to see your price.</p></div>
+
+        <div class="row">
+          <label>Adults<input type="number" name="adults" min="1" value="2" required></label>
+          <label>Children<input type="number" name="children" min="0" value="0"></label>
+        </div>
+        <label>Full name<input type="text" name="name" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+        <label>Message<textarea name="message" rows="3" placeholder="Arrival time, questions…"></textarea></label>
+        <label class="check"><input type="checkbox" name="consent" required> I agree that my details are used to answer my request (<a href="#privacy">privacy policy</a>).</label>
+        <p class="form-error" id="formError" role="alert"></p>
+        <button class="btn btn--block" type="submit">Send booking request</button>
+        <p class="tiny muted">Nothing is charged now. We confirm availability within 24 hours and send payment details for the deposit.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section section--alt" id="location">
+  <div class="wrap location">
+    <div>
+      <p class="eyebrow">Location</p>
+      <h2>In the heart of Istria</h2>
+      <p>Bokordići is a peaceful village near medieval Svetvinčenat, surrounded by vineyards and olive groves, close to both coasts of the peninsula.</p>
+      <ul class="distances">
+        <li><span>Svetvinčenat (shops, restaurants)</span><b>3 km</b></li>
+        <li><span>Nearest beach</span><b>20 km</b></li>
+        <li><span>Rovinj</span><b>25 km</b></li>
+        <li><span>Pula &amp; airport</span><b>30 km</b></li>
+        <li><span>Poreč</span><b>40 km</b></li>
+        <li><span>Motovun</span><b>40 km</b></li>
+        <li><span>Trieste (IT)</span><b>110 km</b></li>
+      </ul>
+    </div>
+    <div class="map">
+      <iframe title="Map of Villa Misan" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Bokordi%C4%87i%2C%20Croatia&z=12&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">Good to know</p>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details><summary>How does booking work?</summary><p>Choose your arrival Saturday in the calendar and send a booking request. We confirm availability within 24 hours and send you a booking confirmation with payment details.</p></details>
+      <details><summary>Can I book for less than a week?</summary><p>No. The villa is rented by the week only, from Saturday to Saturday. You are welcome to book two or more weeks in a row.</p></details>
+      <details><summary>What is the cancellation policy?</summary><p>If you cancel 60 days or more before arrival, you get 50% of the amount paid back. If you cancel less than 60 days before arrival, the full amount is non-refundable. We recommend travel insurance.</p></details>
+      <details><summary>What time are check-in and check-out?</summary><p>Check-in is on Saturday from <span data-fact="checkIn"></span> and check-out is on Saturday by <span data-fact="checkOut"></span>.</p></details>
+      <details><summary>When can I book?</summary><p>Bookings are open from <span data-fact="openFrom"></span> to <span data-fact="openTo"></span>.</p></details>
+      <details><summary>Is there a security deposit?</summary><p>Yes, <span data-fact="deposit"></span> is paid in cash on arrival and returned at check-out after a short walk-through.</p></details>
+      <details><summary>Are pets allowed?</summary><p>No, pets are not allowed at the villa.</p></details>
+      <details><summary>Is the pool heated, and when is it open?</summary><p>The pool is open from May to mid-October and it is not heated.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact__inner">
+    <h2>Questions? Get in touch</h2>
+    <p>We usually reply within a few hours.</p>
+    <div class="contact__links" id="contactLinks"></div>
+  </div>
+</section>
+
+<footer class="footer" id="privacy">
+  <div class="wrap footer__grid">
+    <div>
+      <p class="nav__logo">Villa <span>Misan</span></p>
+      <p id="footAddress"></p>
+    </div>
+    <div id="footLegal"></div>
+    <div class="tiny">
+      <strong>Privacy</strong>
+      <p>We only use the details you send us to answer your request and manage your booking, as required by Croatian law (guest registration via eVisitor). We never share them with third parties for marketing. You can ask us to delete your data at any time.</p>
+    </div>
+  </div>
+  <p class="footer__copy tiny">© <span id="year"></span> Villa Misan</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox__top">
+    <span class="lightbox__count"></span>
+    <button class="lightbox__close" type="button" aria-label="Close">×</button>
+  </div>
+  <div class="lightbox__stage">
+    <button class="lightbox__prev" type="button" aria-label="Previous photo">‹</button>
+    <figure><img class="lightbox__img" alt=""></figure>
+    <button class="lightbox__next" type="button" aria-label="Next photo">›</button>
+  </div>
+  <div class="lightbox__thumbs"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
